@@ -14,6 +14,12 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    reloadNotesGrid(context);
+  }
+
   Future reloadNotesGrid(BuildContext context) async {
     Provider.of<NotesProvider>(context, listen: false)
         .repopulateNotes(await context.read<NotesDbProvider>().getAll());

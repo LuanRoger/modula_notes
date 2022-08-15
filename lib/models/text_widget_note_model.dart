@@ -5,7 +5,7 @@ class TextWidgetNoteModel implements NoteWidgetModel {
   @override
   String value;
   @override
-  NoteWidgetType type = NoteWidgetType.Todo;
+  NoteWidgetType type = NoteWidgetType.Text;
 
   TextWidgetNoteModel(this.value);
 

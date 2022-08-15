@@ -6,6 +6,8 @@ class SembastController {
   Future<Database> initDb() async {
     DatabaseFactory dbFactory = databaseFactoryIo;
 
+    var dbPath = await AppPaths.sembasDbPath();
+
     return await dbFactory.openDatabase(await AppPaths.sembasDbPath());
   }
 }

@@ -18,11 +18,11 @@ class NoteModel {
     List<NoteWidgetModel> noteWidgetsFromMap = List.empty(growable: true);
 
     for (var widget in map["noteWidgets"] as List) {
-      switch (widget["type"] as int) {
-        case 1:
+      switch (NoteWidgetType.values[widget["type"] as int]) {
+        case NoteWidgetType.Text:
           noteWidgetsFromMap.add(TextWidgetNoteModel.fromMap(widget));
           break;
-        case 2:
+        case NoteWidgetType.Todo:
           noteWidgetsFromMap.add(TodoWidgetNoteModel.fromMap(widget));
           break;
       }

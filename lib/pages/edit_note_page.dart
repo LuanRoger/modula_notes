@@ -25,7 +25,7 @@ class EditNotePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title: TextField(
-        placeholder: "Title",
+        placeholder: "Titulo",
         controller: titleFieldController,
       )),
       body: NoteEditor(
