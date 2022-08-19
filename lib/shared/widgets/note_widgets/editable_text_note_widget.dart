@@ -4,9 +4,9 @@ import 'package:modula_notes/shared/widgets/note_widgets/editable_note_widget.da
 import 'package:modula_notes/shared/widgets/text_fields/text_field.dart';
 
 class EditableTextNoteWidget extends EditableNoteWidget {
-  TextWidgetNoteModel model;
+  final TextWidgetNoteModel model;
 
-  EditableTextNoteWidget(this.model,
+  const EditableTextNoteWidget(this.model,
       {Key? key,
       required Key dismissableItemKey,
       void Function(DismissDirection, Key)? onDismissed})

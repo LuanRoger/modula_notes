@@ -4,9 +4,9 @@ import 'package:modula_notes/shared/utils/model_widget_converter.dart';
 import 'package:modula_notes/shared/widgets/note_widgets/editable_note_widget.dart';
 
 class NoteEditor extends StatefulWidget {
-  List<NoteWidgetModel> noteWidgets;
+  final List<NoteWidgetModel> noteWidgets;
 
-  NoteEditor({Key? key, required this.noteWidgets}) : super(key: key);
+  const NoteEditor({Key? key, required this.noteWidgets}) : super(key: key);
 
   @override
   State<NoteEditor> createState() => NoteEditorState();

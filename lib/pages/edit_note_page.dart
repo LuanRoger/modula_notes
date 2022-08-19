@@ -11,9 +11,9 @@ import 'package:provider/provider.dart';
 
 class EditNotePage extends StatelessWidget {
   final noteViewerKey = GlobalKey<NoteEditorState>();
-  NoteModel noteModel;
-  late TextEditingController titleFieldController;
-  bool isNewNote;
+  final NoteModel noteModel;
+  late final TextEditingController titleFieldController;
+  final bool isNewNote;
 
   EditNotePage(this.noteModel, {Key? key, this.isNewNote = false})
       : super(key: key) {

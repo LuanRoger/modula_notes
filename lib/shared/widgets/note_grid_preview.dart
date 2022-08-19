@@ -9,10 +9,10 @@ import 'package:modula_notes/shared/widgets/note_preview.dart';
 import 'package:provider/provider.dart';
 
 class NoteGridPreview extends StatelessWidget {
-  NoteModel noteModel;
-  int indexForHero;
+  final NoteModel noteModel;
+  final int indexForHero;
 
-  NoteGridPreview(this.noteModel, {Key? key, required this.indexForHero})
+  const NoteGridPreview(this.noteModel, {Key? key, required this.indexForHero})
       : super(key: key);
 
   void onSelectPopupMenu(String value, BuildContext context) {

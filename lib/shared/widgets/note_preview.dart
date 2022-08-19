@@ -4,11 +4,12 @@ import 'package:modula_notes/models/note_widget_model.dart';
 import 'package:modula_notes/shared/utils/model_widget_converter.dart';
 
 class NotePreview extends StatelessWidget {
-  List<NoteWidgetModel> noteWidgets;
-  late List<Widget> renderedWidgets;
-  bool scrollable;
+  final List<NoteWidgetModel> noteWidgets;
+  late final List<Widget> renderedWidgets;
+  final bool scrollable;
 
-  NotePreview(this.noteWidgets, {Key? key, this.scrollable = false}) : super(key: key) {
+  NotePreview(this.noteWidgets, {Key? key, this.scrollable = false})
+      : super(key: key) {
     renderedWidgets =
         ModelWidgetConverter.createRenderedNotesWidget(noteWidgets);
   }

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:modula_notes/models/todo_widget_note_model.dart';
 
 class TodoNoteWidget extends StatelessWidget {
-  TodoWidgetNoteModel todoWidgetNoteModel;
+  final TodoWidgetNoteModel todoWidgetNoteModel;
 
-  TodoNoteWidget(this.todoWidgetNoteModel, {Key? key}) : super(key: key);
+  const TodoNoteWidget(this.todoWidgetNoteModel, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

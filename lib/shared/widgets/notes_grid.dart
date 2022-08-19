@@ -3,9 +3,9 @@ import 'package:modula_notes/models/note_model.dart';
 import 'package:modula_notes/shared/widgets/note_grid_preview.dart';
 
 class NotesGrid extends StatelessWidget {
-  List<NoteModel> notes;
+  final List<NoteModel> notes;
 
-  NotesGrid({Key? key, required this.notes}) : super(key: key);
+  const NotesGrid({Key? key, required this.notes}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

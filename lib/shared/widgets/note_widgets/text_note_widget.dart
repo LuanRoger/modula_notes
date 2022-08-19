@@ -3,10 +3,10 @@ import 'package:modula_notes/models/text_widget_note_model.dart';
 import 'package:modula_notes/shared/app_text_style.dart';
 
 class TextNoteWidget extends StatelessWidget {
-  TextWidgetNoteModel textWidgetNoteModel;
-  TextStyle? textStyle;
+  final TextWidgetNoteModel textWidgetNoteModel;
+  final TextStyle? textStyle;
 
-  TextNoteWidget(this.textWidgetNoteModel, {Key? key, this.textStyle})
+  const TextNoteWidget(this.textWidgetNoteModel, {Key? key, this.textStyle})
       : super(key: key);
 
   @override

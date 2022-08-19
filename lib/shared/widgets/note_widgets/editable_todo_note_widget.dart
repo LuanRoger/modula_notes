@@ -4,9 +4,9 @@ import 'package:modula_notes/shared/widgets/note_widgets/editable_note_widget.da
 import 'package:modula_notes/shared/widgets/text_fields/text_field.dart';
 
 class EditableTodoNoteWidget extends EditableNoteWidget {
-  TodoWidgetNoteModel model;
+  final TodoWidgetNoteModel model;
 
-  EditableTodoNoteWidget(this.model,
+  const EditableTodoNoteWidget(this.model,
       {Key? key,
       required Key dismissableItemKey,
       void Function(DismissDirection, Key)? onDismissed})
@@ -22,9 +22,13 @@ class EditableTodoNoteWidget extends EditableNoteWidget {
       onDismissed: (direction) =>
           onDismissed?.call(direction, dismissableItemKey),
       child: ListTile(
-        leading: Checkbox(
-          value: model.done,
-          onChanged: (value) => model.done = value ?? false,
+        leading: StatefulBuilder(
+          builder: (_, setState) {
+            return Checkbox(
+              value: model.done,
+              onChanged: (value) => setState(() => model.done = value ?? false),
+            );
+          },
         ),
         title: TextField(
             placeholder: "Text",

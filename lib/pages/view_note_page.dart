@@ -3,10 +3,10 @@ import 'package:modula_notes/models/note_model.dart';
 import 'package:modula_notes/shared/widgets/note_preview.dart';
 
 class ViewNotePage extends StatelessWidget {
-  NoteModel noteModel;
+  final NoteModel noteModel;
   final String tagForHero;
 
-  ViewNotePage(this.noteModel, {Key? key, required this.tagForHero})
+  const ViewNotePage(this.noteModel, {Key? key, required this.tagForHero})
       : super(key: key);
 
   @override
