@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart' hide TextField;
-import 'package:my_notes/models/note_model.dart';
-import 'package:my_notes/models/note_widget_model.dart';
-import 'package:my_notes/models/text_widget_note_model.dart';
-import 'package:my_notes/models/todo_widget_note_model.dart';
-import 'package:my_notes/providers/notes_db_provider.dart';
-import 'package:my_notes/providers/notes_provider.dart';
-import 'package:my_notes/shared/widgets/note_editor.dart';
-import 'package:my_notes/shared/widgets/text_fields/text_field.dart';
+import 'package:modula_notes/models/note_model.dart';
+import 'package:modula_notes/models/note_widget_model.dart';
+import 'package:modula_notes/models/text_widget_note_model.dart';
+import 'package:modula_notes/models/todo_widget_note_model.dart';
+import 'package:modula_notes/providers/notes_db_provider.dart';
+import 'package:modula_notes/providers/notes_provider.dart';
+import 'package:modula_notes/shared/widgets/note_editor.dart';
+import 'package:modula_notes/shared/widgets/text_fields/text_field.dart';
 import 'package:provider/provider.dart';
 
 class EditNotePage extends StatelessWidget {

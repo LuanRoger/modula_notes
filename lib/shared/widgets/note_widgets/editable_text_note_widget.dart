@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart' hide TextField;
-import 'package:my_notes/models/text_widget_note_model.dart';
-import 'package:my_notes/shared/widgets/note_widgets/editable_note_widget.dart';
-import 'package:my_notes/shared/widgets/text_fields/text_field.dart';
+import 'package:modula_notes/models/text_widget_note_model.dart';
+import 'package:modula_notes/shared/widgets/note_widgets/editable_note_widget.dart';
+import 'package:modula_notes/shared/widgets/text_fields/text_field.dart';
 
 class EditableTextNoteWidget extends EditableNoteWidget {
   TextWidgetNoteModel model;

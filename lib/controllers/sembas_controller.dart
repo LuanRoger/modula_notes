@@ -1,4 +1,4 @@
-import 'package:my_notes/shared/app_paths.dart';
+import 'package:modula_notes/shared/app_paths.dart';
 import 'package:sembast/sembast.dart';
 import 'package:sembast/sembast_io.dart';
 

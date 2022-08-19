@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_notes/models/note_widget_model.dart';
-import 'package:my_notes/shared/utils/model_widget_converter.dart';
+import 'package:modula_notes/models/note_widget_model.dart';
+import 'package:modula_notes/shared/utils/model_widget_converter.dart';
 
 class NotePreview extends StatelessWidget {
   List<NoteWidgetModel> noteWidgets;

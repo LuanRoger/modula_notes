@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_notes/models/text_widget_note_model.dart';
-import 'package:my_notes/shared/app_text_style.dart';
+import 'package:modula_notes/models/text_widget_note_model.dart';
+import 'package:modula_notes/shared/app_text_style.dart';
 
 class TextNoteWidget extends StatelessWidget {
   TextWidgetNoteModel textWidgetNoteModel;

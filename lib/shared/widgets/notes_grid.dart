@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_notes/models/note_model.dart';
-import 'package:my_notes/shared/widgets/note_grid_preview.dart';
+import 'package:modula_notes/models/note_model.dart';
+import 'package:modula_notes/shared/widgets/note_grid_preview.dart';
 
 class NotesGrid extends StatelessWidget {
   List<NoteModel> notes;

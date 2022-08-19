@@ -1,4 +1,4 @@
-import 'package:my_notes/models/note_model.dart';
+import 'package:modula_notes/models/note_model.dart';
 import 'package:sembast/sembast.dart';
 
 class NotesDbProvider {

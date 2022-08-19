@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_notes/models/todo_widget_note_model.dart';
+import 'package:modula_notes/models/todo_widget_note_model.dart';
 
 class TodoNoteWidget extends StatelessWidget {
   TodoWidgetNoteModel todoWidgetNoteModel;

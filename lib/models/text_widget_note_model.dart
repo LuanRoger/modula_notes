@@ -1,5 +1,5 @@
-import 'package:my_notes/models/enum/note_widget_types.dart';
-import 'package:my_notes/models/note_widget_model.dart';
+import 'package:modula_notes/models/enum/note_widget_types.dart';
+import 'package:modula_notes/models/note_widget_model.dart';
 
 class TextWidgetNoteModel implements NoteWidgetModel {
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_notes/models/note_model.dart';
+import 'package:modula_notes/models/note_model.dart';
 
 class NotesProvider extends ChangeNotifier {
   List<NoteModel> _notes = List.empty(growable: true);

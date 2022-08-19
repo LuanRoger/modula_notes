@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_notes/models/note_model.dart';
-import 'package:my_notes/pages/edit_note_page.dart';
-import 'package:my_notes/pages/view_note_page.dart';
-import 'package:my_notes/providers/notes_db_provider.dart';
-import 'package:my_notes/providers/notes_provider.dart';
-import 'package:my_notes/shared/app_text_style.dart';
-import 'package:my_notes/shared/widgets/note_preview.dart';
+import 'package:modula_notes/models/note_model.dart';
+import 'package:modula_notes/pages/edit_note_page.dart';
+import 'package:modula_notes/pages/view_note_page.dart';
+import 'package:modula_notes/providers/notes_db_provider.dart';
+import 'package:modula_notes/providers/notes_provider.dart';
+import 'package:modula_notes/shared/app_text_style.dart';
+import 'package:modula_notes/shared/widgets/note_preview.dart';
 import 'package:provider/provider.dart';
 
 class NoteGridPreview extends StatelessWidget {

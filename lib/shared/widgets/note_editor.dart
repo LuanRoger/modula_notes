@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:my_notes/models/note_widget_model.dart';
-import 'package:my_notes/models/text_widget_note_model.dart';
-import 'package:my_notes/models/todo_widget_note_model.dart';
-import 'package:my_notes/shared/utils/model_widget_converter.dart';
-import 'package:my_notes/shared/widgets/note_widgets/editable_note_widget.dart';
-import 'package:my_notes/shared/widgets/note_widgets/editable_text_note_widget.dart';
-import 'package:my_notes/shared/widgets/note_widgets/editable_todo_note_widget.dart';
+import 'package:modula_notes/models/note_widget_model.dart';
+import 'package:modula_notes/shared/utils/model_widget_converter.dart';
+import 'package:modula_notes/shared/widgets/note_widgets/editable_note_widget.dart';
 
 class NoteEditor extends StatefulWidget {
   List<NoteWidgetModel> noteWidgets;

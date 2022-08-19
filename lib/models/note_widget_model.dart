@@ -1,4 +1,4 @@
-import 'package:my_notes/models/enum/note_widget_types.dart';
+import 'package:modula_notes/models/enum/note_widget_types.dart';
 
 abstract class NoteWidgetModel {
   String value;

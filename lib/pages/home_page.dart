@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_notes/models/note_model.dart';
-import 'package:my_notes/pages/edit_note_page.dart';
-import 'package:my_notes/providers/notes_db_provider.dart';
-import 'package:my_notes/providers/notes_provider.dart';
-import 'package:my_notes/shared/widgets/notes_grid.dart';
+import 'package:modula_notes/models/note_model.dart';
+import 'package:modula_notes/pages/edit_note_page.dart';
+import 'package:modula_notes/providers/notes_db_provider.dart';
+import 'package:modula_notes/providers/notes_provider.dart';
+import 'package:modula_notes/shared/widgets/notes_grid.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -29,7 +29,7 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("My Notes"),
+        title: const Text("Modula Notes"),
       ),
       body: Consumer<NotesProvider>(
         builder: (_, value, __) => RefreshIndicator(

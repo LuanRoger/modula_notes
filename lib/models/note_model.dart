@@ -1,8 +1,8 @@
-import 'package:my_notes/models/enum/note_widget_types.dart';
-import 'package:my_notes/models/note_widget_model.dart';
-import 'package:my_notes/models/text_widget_note_model.dart';
-import 'package:my_notes/models/todo_widget_note_model.dart';
-import 'package:my_notes/shared/utils/uuid_generator.dart';
+import 'package:modula_notes/models/enum/note_widget_types.dart';
+import 'package:modula_notes/models/note_widget_model.dart';
+import 'package:modula_notes/models/text_widget_note_model.dart';
+import 'package:modula_notes/models/todo_widget_note_model.dart';
+import 'package:modula_notes/shared/utils/uuid_generator.dart';
 
 class NoteModel {
   String uId;
