@@ -4,6 +4,7 @@ import 'package:modula_notes/pages/edit_note_page.dart';
 import 'package:modula_notes/pages/view_note_page.dart';
 import 'package:modula_notes/providers/notes_db_provider.dart';
 import 'package:modula_notes/providers/notes_provider.dart';
+import 'package:modula_notes/routes/app_routes.dart';
 import 'package:modula_notes/shared/app_text_style.dart';
 import 'package:modula_notes/shared/widgets/note_preview.dart';
 import 'package:provider/provider.dart';
@@ -18,8 +19,8 @@ class NoteGridPreview extends StatelessWidget {
   void onSelectPopupMenu(String value, BuildContext context) {
     switch (value) {
       case "/edit_page":
-        Navigator.push(context,
-            MaterialPageRoute(builder: (_) => EditNotePage(noteModel)));
+        Navigator.pushNamed(context, AppRoutes.EDIT_NOTE_ROUTE,
+            arguments: [noteModel, null]);
         break;
       case "/delete_dialog":
         deleteDialog(context);
@@ -55,15 +56,9 @@ class NoteGridPreview extends StatelessWidget {
     final String heroTag = "note_preview$indexForHero";
 
     return Card(
-      //elevation: 0,
       child: InkWell(
-          onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => ViewNotePage(
-                        noteModel,
-                        tagForHero: heroTag,
-                      ))),
+          onTap: () => Navigator.pushNamed(context, AppRoutes.VIEW_NOTE_ROUTE,
+              arguments: [noteModel, heroTag]),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(children: [
