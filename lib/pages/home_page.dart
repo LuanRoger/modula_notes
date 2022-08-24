@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:modula_notes/models/note_model.dart';
-import 'package:modula_notes/pages/edit_note_page.dart';
 import 'package:modula_notes/providers/notes_db_provider.dart';
 import 'package:modula_notes/providers/notes_provider.dart';
+import 'package:modula_notes/routes/app_routes.dart';
 import 'package:modula_notes/shared/widgets/notes_grid.dart';
 import 'package:provider/provider.dart';
 
@@ -30,6 +30,12 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Modula Notes"),
+        actions: [
+          IconButton(
+              onPressed: () =>
+                  Navigator.pushNamed(context, AppRoutes.SETTINGS_ROUTE),
+              icon: const Icon(Icons.settings))
+        ],
       ),
       body: Consumer<NotesProvider>(
         builder: (_, value, __) => RefreshIndicator(
@@ -44,13 +50,8 @@ class HomePageState extends State<HomePage> {
         onPressed: () {
           NoteModel noteModel = NoteModel.newNote();
 
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => EditNotePage(
-                        noteModel,
-                        isNewNote: true,
-                      )));
+          Navigator.pushNamed(context, AppRoutes.EDIT_NOTE_ROUTE,
+              arguments: [noteModel, true]);
         },
       ),
     );
