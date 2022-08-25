@@ -20,6 +20,7 @@ class NoteEditorState extends State<NoteEditor> {
   void initState() {
     super.initState();
     noteWidgetsModel = List.from(widget.noteWidgets);
+    renderedWidgets = List.empty(growable: true);
     _rerenderWidgets();
   }
 

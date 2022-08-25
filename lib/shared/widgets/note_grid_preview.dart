@@ -53,55 +53,50 @@ class NoteGridPreview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String heroTag = "note_preview$indexForHero";
-
     return Card(
       child: InkWell(
           onTap: () => Navigator.pushNamed(context, AppRoutes.VIEW_NOTE_ROUTE,
-              arguments: [noteModel, heroTag]),
+              arguments: [noteModel]),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Column(children: [
-              Flexible(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: Text(
-                        noteModel.title,
-                        style: AppTextStyle.NOTE_TITLE_GRID_PREVIEW,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                      ),
-                    ),
-                    Flexible(
-                      child: PopupMenuButton(
-                        itemBuilder: (context) => [
-                          const PopupMenuItem(
-                            value: "/edit_page",
-                            child: Text("Editar"),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Flexible(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Flexible(
+                          child: Text(
+                            noteModel.title,
+                            style: AppTextStyle.NOTE_TITLE_GRID_PREVIEW,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
                           ),
-                          const PopupMenuItem(
-                            value: "/delete_dialog",
-                            child: Text("Deletar"),
-                          )
-                        ],
-                        onSelected: (String value) =>
-                            onSelectPopupMenu(value, context),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Expanded(
-                  child: Hero(
-                      tag: heroTag,
-                      child: Material(
-                          type: MaterialType.transparency,
-                          clipBehavior: Clip.antiAlias,
-                          child: NotePreview(noteModel.noteWidgets))))
-            ]),
+                        ),
+                        Flexible(
+                          child: PopupMenuButton(
+                            itemBuilder: (context) => [
+                              const PopupMenuItem(
+                                value: "/edit_page",
+                                child: Text("Editar"),
+                              ),
+                              const PopupMenuItem(
+                                value: "/delete_dialog",
+                                child: Text("Deletar"),
+                              )
+                            ],
+                            onSelected: (String value) =>
+                                onSelectPopupMenu(value, context),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Expanded(flex: 0, child: NotePreview(noteModel.noteWidgets))
+                ]),
           )),
     );
   }

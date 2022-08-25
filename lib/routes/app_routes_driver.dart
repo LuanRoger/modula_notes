@@ -17,7 +17,7 @@ class AppRoutesDriver {
         return goToEditNotePage(routeArgs![0],
             isNewNote: routeArgs[1] ?? false);
       case AppRoutes.VIEW_NOTE_ROUTE:
-        return goToViewNotePage(routeArgs![0], routeArgs[1]);
+        return goToViewNotePage(routeArgs![0]);
       case AppRoutes.SETTINGS_ROUTE:
         return goToSettingsPage;
       default:
@@ -34,10 +34,8 @@ class AppRoutesDriver {
                 noteModel,
                 isNewNote: isNewNote,
               ));
-  static Route<ViewNotePage> goToViewNotePage(
-          NoteModel noteModel, String tagForHero) =>
-      MaterialPageRoute(
-          builder: (_) => ViewNotePage(noteModel, tagForHero: tagForHero));
+  static Route<ViewNotePage> goToViewNotePage(NoteModel noteModel) =>
+      MaterialPageRoute(builder: (_) => ViewNotePage(noteModel));
   static Route<SettingsPage> get goToSettingsPage =>
       MaterialPageRoute(builder: (_) => const SettingsPage());
 }
