@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:modula_notes/models/image_widget_note_model.dart';
 import 'package:modula_notes/models/note_widget_model.dart';
 import 'package:modula_notes/models/text_widget_note_model.dart';
 import 'package:modula_notes/models/todo_widget_note_model.dart';
+import 'package:modula_notes/shared/widgets/note_widgets/editable_image_widget.dart';
 import 'package:modula_notes/shared/widgets/note_widgets/editable_note_widget.dart';
 import 'package:modula_notes/shared/widgets/note_widgets/editable_text_note_widget.dart';
 import 'package:modula_notes/shared/widgets/note_widgets/editable_todo_note_widget.dart';
+import 'package:modula_notes/shared/widgets/note_widgets/image_widget_note.dart';
 import 'package:modula_notes/shared/widgets/note_widgets/text_note_widget.dart';
 import 'package:modula_notes/shared/widgets/note_widgets/todo_note_widget.dart';
 
@@ -16,6 +19,8 @@ class ModelWidgetConverter {
     for (var model in notesWidgets) {
       if (model is TodoWidgetNoteModel) {
         noteWidgetsRendered.add(TodoNoteWidget(model));
+      } else if (model is ImageWidgetNoteModel) {
+        noteWidgetsRendered.add(ImageWidgetNote(model));
       } else {
         noteWidgetsRendered.add(TextNoteWidget(
           model as TextWidgetNoteModel,
@@ -40,6 +45,15 @@ class ModelWidgetConverter {
           model,
           key: widgetListKey,
           dismissableItemKey: dismissableKey,
+          onDismissed: onDismiss,
+        ));
+      } else if (model is ImageWidgetNoteModel) {
+        Key dismissableKey = ValueKey(noteWidgets);
+        Key widgetListKey = ValueKey(count);
+        noteWidgetsRendered.add(EditableImageWidget(
+          model,
+          dismissableItemKey: dismissableKey,
+          key: widgetListKey,
           onDismissed: onDismiss,
         ));
       } else {

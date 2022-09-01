@@ -1,4 +1,5 @@
 import 'package:modula_notes/models/enum/note_widget_types.dart';
+import 'package:modula_notes/models/image_widget_note_model.dart';
 import 'package:modula_notes/models/note_widget_model.dart';
 import 'package:modula_notes/models/text_widget_note_model.dart';
 import 'package:modula_notes/models/todo_widget_note_model.dart';
@@ -24,6 +25,9 @@ class NoteModel {
           break;
         case NoteWidgetType.Todo:
           noteWidgetsFromMap.add(TodoWidgetNoteModel.fromMap(widget));
+          break;
+        case NoteWidgetType.Image:
+          noteWidgetsFromMap.add(ImageWidgetNoteModel.fromMap(widget));
           break;
       }
     }

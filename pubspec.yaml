@@ -18,6 +18,7 @@ dependencies:
   uuid: ^3.0.6
   path: ^1.8.1
   shared_preferences: ^2.0.15
+  file_picker: ^5.0.1
 
 dev_dependencies:
   flutter_test:

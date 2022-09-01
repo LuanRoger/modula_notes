@@ -1,3 +1,3 @@
 // ignore_for_file: constant_identifier_names
 
-enum NoteWidgetType { Text, Todo }
+enum NoteWidgetType { Text, Todo, Image }

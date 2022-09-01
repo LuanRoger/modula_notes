@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide TextField;
+import 'package:modula_notes/models/image_widget_note_model.dart';
 import 'package:modula_notes/models/note_model.dart';
 import 'package:modula_notes/models/note_widget_model.dart';
 import 'package:modula_notes/models/text_widget_note_model.dart';
@@ -64,6 +65,10 @@ class EditNotePage extends StatelessWidget {
               onPressed: () => noteViewerKey.currentState!
                   .addNoteWidget(TodoWidgetNoteModel(false, "")),
               icon: const Icon(Icons.check_box)),
+          IconButton(
+              onPressed: () => noteViewerKey.currentState!
+                  .addNoteWidget(ImageWidgetNoteModel("")),
+              icon: const Icon(Icons.image))
         ]),
       ),
     );
