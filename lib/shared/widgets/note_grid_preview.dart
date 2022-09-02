@@ -54,23 +54,26 @@ class NoteGridPreview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      clipBehavior: Clip.antiAlias,
       child: InkWell(
           onTap: () => Navigator.pushNamed(context, AppRoutes.VIEW_NOTE_ROUTE,
               arguments: [noteModel]),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(left: 8.0, top: 8.0, right: 8.0),
             child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Flexible(
+                    flex: 0,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Flexible(
+                        Expanded(
                           child: Text(
                             noteModel.title,
+                            textAlign: TextAlign.start,
                             style: AppTextStyle.NOTE_TITLE_GRID_PREVIEW,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,
@@ -95,7 +98,10 @@ class NoteGridPreview extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Expanded(flex: 0, child: NotePreview(noteModel.noteWidgets))
+                  Expanded(
+                      child: NotePreview(
+                        noteModel.noteWidgets,
+                      ))
                 ]),
           )),
     );

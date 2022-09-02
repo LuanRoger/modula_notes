@@ -18,6 +18,7 @@ class NotePreview extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       physics: scrollable ? null : const NeverScrollableScrollPhysics(),
+      scrollDirection: Axis.vertical,
       shrinkWrap: true,
       children: renderedWidgets,
     );
