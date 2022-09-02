@@ -45,6 +45,7 @@ class NoteEditorState extends State<NoteEditor> {
   }
 
   void _onReoderWidgetList(int oldIndex, int newIndex) {
+    newIndex--;
     NoteWidgetModel widget = noteWidgetsModel.removeAt(oldIndex);
     noteWidgetsModel.insert(
         newIndex > oldIndex ? newIndex-- : newIndex, widget);

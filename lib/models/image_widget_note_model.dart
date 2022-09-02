@@ -13,6 +13,6 @@ class ImageWidgetNoteModel implements NoteWidgetModel {
 
   @override
   Map<String, Object> toMap() => {"value": value, "type": type.index};
-  static ImageWidgetNoteModel fromMap(Map<String, Object> map) =>
+  static ImageWidgetNoteModel fromMap(Map<String, Object?> map) =>
       ImageWidgetNoteModel(map["value"] as String);
 }
